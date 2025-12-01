@@ -13,7 +13,7 @@ export default function Day1Page(){
 
     // Filtering student data baseed on the search query parameter Any casee Matched..
     const filterStudents = students.filter(student=>{
-        return student.name.toLowerCase().includes(query.toLocaleLowerCase()) || student.roll.toString().toLowerCase().includes(query.toString().toLocaleLowerCase())
+        return student.name.toLowerCase().includes(query.trimStart().toLocaleLowerCase()) || student.roll.toString().toLowerCase().includes(query.trimStart().toString().toLocaleLowerCase())
     });
 
     return (
