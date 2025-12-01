@@ -1,16 +1,48 @@
-# React + Vite
+# React Concepts Practice
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository belongs to **Abhisheksinghchauhan192**.  
+It contains practice code and mini projects created while learning and revising **React** concepts.
 
-Currently, two official plugins are available:
+## About this Repository
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is mainly for:
 
-## React Compiler
+- Practicing core React concepts
+- Building small mini projects
+- Experimenting with different React patterns and features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## React Concepts Covered
 
-## Expanding the ESLint configuration
+Some of the concepts practiced in this repository include:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Components and JSX
+- Props and State
+- Event handling
+- Conditional rendering
+- Lists and keys
+- React Hooks (such as `useState`, `useEffect`, etc.)
+- Context API
+- React Router (if added in projects)
+- Form handling and validation
+- Other React best practices and patterns
+
+## Mini Projects
+
+Along with basic examples, this repository may include:
+
+- Small, focused mini projects
+- Practical implementations of specific concepts
+- Experiments to try new ideas in React
+
+These projects are mainly for personal learning and improving React skills.
+
+## Tech Stack
+
+- **React**
+- **Vite**
+- **JavaScript** (and possibly TypeScript in future)
+- Additional libraries or tools as needed per mini project
+
+## Origin
+
+This repository was initially created from the default **React + Vite** template and is being customized as part of ongoing learning and practice.
