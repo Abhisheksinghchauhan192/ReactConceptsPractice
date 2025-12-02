@@ -1,5 +1,5 @@
 
-export default function SearchBox({query,placeholder,onChange}){
+export default function SearchBox({query,placeholder,onChange,children}){
 
     return (    
         <div className="flex w-full gap-16  justify-center">
@@ -9,9 +9,8 @@ export default function SearchBox({query,placeholder,onChange}){
              value={query} 
              onChange={(e)=>onChange(e.target.value)}
              />
-            <button 
-            className="flex justify-center items-center border-2 border-teal-300 px-4 py-2  rounded-2xl hover:bg-teal-200 cursor-pointer"
-            onClick={()=>onChange('')}>Reset</button>
+            {children}
+
         </div>
     )
 }
