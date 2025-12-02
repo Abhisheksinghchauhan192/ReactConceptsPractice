@@ -1,6 +1,6 @@
 export const students = [
   { name: "Aarav Sharma", year: "I", roll: "21CS001", branch: "CSE", email: "aarav.sharma@example.com", remarks: "works well under pressure" },
-  { name: "Vihaan Verma", year: "I", roll: "21CS002", branch: "CSE", email: "vihaan.verma@example.com", remarks: "strong logic but inconsistent" },
+  { name: "Vihaan", year: "I", roll: "21CS002", branch: "CSE", email: "vihaan.verma@example.com", remarks: "strong logic but inconsistent" },
   { name: "Aditya Singh", year: "I", roll: "21CS003", branch: "CSE", email: "aditya.singh@example.com", remarks: "needs focus on project deadlines" },
   { name: "Ishaan Gupta", year: "I", roll: "21CS004", branch: "CSE", email: "ishaan.gupta@example.com", remarks: "quiet learner with solid fundamentals" },
   { name: "Krishna Patel", year: "I", roll: "21CS005", branch: "CSE", email: "krishna.patel@example.com", remarks: "participates actively in group discussions" },

@@ -1,26 +1,22 @@
-import Avatar from '../../../components/Avatar'
+import Card from './Card'
 export default function SearchableCardList({cards}){
+
+    if(cards.length===0){
+
+        return (
+            <div className='flex flex-col items-center gap-4'>
+                <h1 className='text-6xl font-bold text-red-500 '>No Data Found For Your Search</h1>
+                <p className='text-xl font-semibold italic '>Try Searching with Student Name or by Roll. Number </p>
+            </div>
+        )
+    }
 
     const cardsElements = cards.map(card=>{
 
-        return (
-
-            <div 
-            key={card.roll}
-            className='flex flex-col p-4 rounded-lg gap-4 border-2 border-indigo-400 max-w-70'>
-                <div className='flex justify-center'>
-                <Avatar  img={card.name[0]}></Avatar>
-                </div>
-                <h3 className='text-2xl font-bold '>{card.name}</h3>
-                <div className='flex gap-4 font-semibold'>
-                    <p> Roll: {card.roll}</p>
-                    <p>Branch: {card.branch}</p>
-                    <p>Year: {card.year}</p>
-                </div>
-                <p className='text-md font-semibold'>Email: {card.email}</p>
-                <p className='italic font-semibold'>{card.remarks}</p>
-            </div>
-        )
+        return <Card 
+        key={card.roll}
+        card={card}
+        />
     })
 
     return(
