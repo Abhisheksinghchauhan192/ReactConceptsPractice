@@ -72,18 +72,21 @@ export default function Day2Page() {
           placeholder={"Enter Name Or Roll Number to Search Student.."}
           onChange={handleChange}
         >
+        <div className="flex gap-4">
+
           <DropDownSelection
             onChange={handleBranchChange}
             data={allBranches}
             value={branch}
             name={"branch"}
-          />
+            />
           <DropDownSelection
             onChange={handleYearChange}
             data={allYears}
             value={year}
             name={"year"}
-          />
+            />
+            </div>
           <button
             className="flex justify-center items-center border-2 border-teal-300 px-4 py-2  rounded-2xl hover:bg-teal-200 cursor-pointer text-xl font-semibold"
             onClick={() => {
