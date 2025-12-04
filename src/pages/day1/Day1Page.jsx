@@ -23,7 +23,12 @@ export default function Day1Page(){
             <SearchBox query={query} 
             placeholder={"Enter Name Or Roll Number to Search Student.."}
             onChange={handleChange}
-            />
+            >
+            <button
+            className="border-2 border-teal-300 px-4 py-2 cursor-pointer rounded-2xl"
+            onClick={()=>handleChange('')}>Reset</button>
+        </SearchBox>
+
             <div className="flex flex-col p-4 rounded-lg gap-4 border-2 border-teal-200 ">
             <SearchableCardList cards={filterStudents}/>
             </div>

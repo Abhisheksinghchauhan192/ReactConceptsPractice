@@ -25,7 +25,7 @@ export default function Accordian({data}){
 
     return (
 
-        <div className="flex flex-col w-2xl m-20 ">
+        <div className="flex flex-col w-screen max-w-xl p-4 m-20 ">
             {accordianItems}
         </div>
     )
