@@ -1,5 +1,6 @@
 import { useCardData, useCardUpdateData } from "../context/CardContextProvider";
 import { useState } from "react";
+import {Loader} from 'lucide-react'
 
 export default function Form({showCard,onShow}) {
 
@@ -30,8 +31,9 @@ export default function Form({showCard,onShow}) {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center text-4xl">
-        <h2>Generating....</h2>
+      <div className="flex justify-center items-center text-4xl gap-2 ">
+        <Loader className="h-20 w-20 animate-spin"/>
+        <h2>  Generating ....</h2>
       </div>
     );
   }
