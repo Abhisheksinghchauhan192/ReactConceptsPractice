@@ -1,37 +1,34 @@
-import { Link } from "react-router-dom";
-import Avatar from "./Avatar";
-import { useState } from "react";
-
-export default function ProjectCard({ name, desc, link, details }) {
-  const [show, setShow] = useState(false);
-
-  function handleShow() {
-    setShow(!show);
-  }
-
+export default function ProjectCard({ name, link, desc, details }) {
   return (
-    <div
-      className="flex flex-col justify-center  items-center gap-2 p-4 border-emerald-200 shadow-sm shadow-emerald-100 border-2 w-sm rounded-lg bg-linear-to-br from-slate-800 to-slate-950
-        inset-shadow-black inset-shadow-sm
-        "
-    >
-      <Avatar img={desc[0]} />
-      <h2 className="text-3xl font-bold">{name}</h2>
-      <div className="flex justify-end p-2 ">
-        <Link to={link} className="text-blue-400 font-bold text-lg">
-          Link
-        </Link>
+    <article className="bg-gradient-to-b from-slate-800/80 to-slate-900/60 border border-slate-700/60 rounded-2xl p-5 shadow-lg shadow-black/50 hover:shadow-xl transform hover:scale-105 transition-all duration-200">
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          <h3 className="text-lg font-semibold text-gray-100">{name}</h3>
+          <p className="mt-1 text-sm text-gray-300 line-clamp-3">{desc}</p>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <a
+            href={link}
+            target="_blank"
+            rel="noreferrer"
+            className="text-xs px-2 py-1 rounded-full bg-emerald-600/90 text-white font-medium hover:bg-emerald-500 transition"
+            aria-label={`Open ${name} project link`}
+          >
+            Open
+          </a>
+        </div>
       </div>
-      <p className="text-ceter text-lg font-semibold">{desc}</p>
-      <button
-        className="flex px-4 py-2 bg-teal-300 border-none ring-2 ring-indigo-950  rounded-xl text-slate-900 font-semibold"
-        onClick={handleShow}
-      >
-        {show ? "Hide Details" : "Show Details"}
-      </button>
-      {show && (
-        <p className="text-lg text-gray-600 font-semibold ">{details}</p>
+
+      {details && (
+        <div className="mt-4 text-sm text-gray-400">
+          <p className="line-clamp-4">{details}</p>
+        </div>
       )}
-    </div>
+
+      <footer className="mt-4 flex items-center justify-end text-xs text-gray-400">
+        <span className="italic">React · Demo</span>
+      </footer>
+    </article>
   );
 }
