@@ -27,7 +27,7 @@ export default function Card({...props}){
                  </p>
             </div>
             <button
-            className='flex justify-center items-center px-4 py-2 font-medium w-12'
+            className='flex justify-center items-center px-4 py-2 font-medium w-12 cursor-pointer'
             onClick={()=>setShow(!show)}>{show?"Close":"More.."}</button>
             {show && <p className='text-lg font-medium text-amber-400 '> {props.description}</p>}
         </div>
