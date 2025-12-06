@@ -6,7 +6,8 @@ import Day3Page from "../pages/day3/Day3Page";
 import Day4Page from "../pages/day4/Day4Page";
 import AddProject from "../pages/addProject/AddProject";
 import Day5Page from "../pages/day5/Day5Page";
-import GeneratedCard from "../pages/day5/GeneratedCard";
+import Day6Page from "../pages/day6/Day6Page";
+
 const routes = [
   {
     path: "/",
@@ -37,8 +38,8 @@ const routes = [
     element: <Day5Page />,
   },
   { 
-    path: "result", 
-    element: <GeneratedCard />,
+    path: "day6", 
+    element: <Day6Page />,
  },
 
 ];
