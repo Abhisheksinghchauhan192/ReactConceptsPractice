@@ -1,37 +1,51 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState,useRef } from "react";
 import FilePreviewCard from "./components/FilePreviewCard";
 
 export default function Day6Page() {
   const [isDragging, setIsDragging] = useState(false);
   const [filePreviews, setFilePreviews] = useState([]);
 
+	const refFiles = useRef(null);
+
   function handleDragOver(e) {
     e.preventDefault();
     setIsDragging(true);
   }
+
+	function handleClickOnDragableArea(){
+		if(refFiles.current){
+			refFiles.current.click();
+		}
+	}
 
   function handleDragLeave(e) {
     e.preventDefault();
     setIsDragging(false);
   }
 
+  function handleFiles(fileList) {
+    const filesArray = Array.from(fileList);
+
+    const newPreviews = filesArray.map((file) => ({
+      id: crypto.randomUUID(),
+			file,
+			url: URL.createObjectURL(file),
+    }));
+
+    setFilePreviews((prev) => [...prev, ...newPreviews]);
+  }
+
+	function handleFileSelect(e){
+		const selectedFiles = e.target.files;
+		handleFiles(selectedFiles)
+	}
+
   function handleDrop(e) {
     e.preventDefault();
     setIsDragging(false);
+    const droppedFiles = e.dataTransfer.files;
+		handleFiles(droppedFiles)
 
-    const droppedFiles = Array.from(e.dataTransfer.files);
-
-    const mapped = droppedFiles.map((file, index) => {
-      const url = URL.createObjectURL(file);
-
-      return {
-        id: `${file.name}-${file.size}-${index}-${Date.now()}`,
-        file,
-        url,
-      };
-    });
-
-    setFilePreviews((prev) => [...prev, ...mapped]);
   }
 
   useEffect(() => {
@@ -64,12 +78,14 @@ export default function Day6Page() {
           }`}
       >
         <div className="flex flex-col items-center gap-4 text-center">
-          <div className="flex items-center justify-center w-20 h-20 rounded-full bg-slate-900/70 shadow-md">
+          <div 
+					onClick={handleClickOnDragableArea}
+					className="flex items-center justify-center w-20 h-20 rounded-full bg-slate-900/70 shadow-md cursor-pointer ">
             <span className="text-3xl">📂</span>
           </div>
 
           <p className="text-base md:text-lg font-medium">
-            {isDragging ? "Drop files here" : "Drag & drop your files here"}
+            {isDragging ? "Drop files here" : "Drag & drop your files here Or Select Your Files"}
           </p>
 
           <p className="text-xs md:text-sm text-slate-400">
@@ -77,6 +93,15 @@ export default function Day6Page() {
           </p>
         </div>
       </div>
+
+			{/* Hidden input for selecting files in the drag area. */}
+
+			<input type="file"
+			className="hidden"
+			multiple
+			ref={refFiles}
+			onChange={handleFileSelect}
+			/>
 
       {filePreviews.length > 0 && (
         <div className="w-full max-w-5xl">
@@ -89,8 +114,6 @@ export default function Day6Page() {
           </div>
         </div>
       )}
-			
     </div>
   );
 }
-
