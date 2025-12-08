@@ -7,6 +7,7 @@ import Day4Page from "../pages/day4/Day4Page";
 import AddProject from "../pages/addProject/AddProject";
 import Day5Page from "../pages/day5/Day5Page";
 import Day6Page from "../pages/day6/Day6Page";
+import Day7Page from "../pages/day7/Day7Page";
 
 const routes = [
   {
@@ -41,7 +42,11 @@ const routes = [
     path: "day6", 
     element: <Day6Page />,
  },
-
+ {
+  path:'day7',
+  element:<Day7Page/>,
+ },
+,
 ];
 
 export const router = createBrowserRouter(routes);
