@@ -6,5 +6,5 @@ export const projectsData =[
     {name:"Day5",link:'/day5',desc:'Passing Data through context',details:"Paasing the data to component using context hook "},
     {name:"Day6",link:"/day6",desc:"Drag  and Drop Feature Implementation",details:"Drag and drop implementaion using native dom and previewing the docs.."},
     {name:"Day7",link:"/day7",desc:"Sign up Form Component ",details:"A signup form with flexible FormInput component "},
-    
+    {name:"Day8",link:"/day8",desc:"Dynamic Routinig in React ",details:"Implementation of dynamic routing in reeact with user and userProfile Page Dynamic Routing."} 
 ]

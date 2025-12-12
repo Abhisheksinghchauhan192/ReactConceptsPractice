@@ -1,6 +1,6 @@
 export default function ProjectCard({ name, link, desc, details }) {
   return (
-    <article className="bg-gradient-to-b from-slate-800/80 to-slate-900/60 border border-slate-700/60 rounded-2xl p-5 shadow-lg shadow-black/50 hover:shadow-xl transform hover:scale-105 transition-all duration-200">
+    <article className="bg-linear-to-b from-slate-800/80 to-slate-900/60 border border-slate-700/60 rounded-2xl p-5 shadow-lg shadow-black/50 hover:shadow-sm hover:shadow-emerald-300 hover:border hover:border-emerald-300 transform hover:scale-105 transition-all duration-200">
       <div className="flex items-start justify-between gap-4">
         <div>
           <h3 className="text-lg font-semibold text-gray-100">{name}</h3>

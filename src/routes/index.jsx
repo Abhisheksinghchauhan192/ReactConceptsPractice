@@ -1,13 +1,14 @@
 import { createBrowserRouter } from "react-router-dom";
-import DashBoard from "../pages/dashboard/DashBoard";
-import Day1Page from "../pages/day1/Day1Page";
-import Day2Page from "../pages/day2/Day2Page";
-import Day3Page from "../pages/day3/Day3Page";
-import Day4Page from "../pages/day4/Day4Page";
-import AddProject from "../pages/addProject/AddProject";
-import Day5Page from "../pages/day5/Day5Page";
-import Day6Page from "../pages/day6/Day6Page";
-import Day7Page from "../pages/day7/Day7Page";
+import DashBoard from "../features/dashboard/DashBoard";
+import Day1Page from "../features/day1/Day1Page";
+import Day2Page from "../features/day2/Day2Page";
+import Day3Page from "../features/day3/Day3Page";
+import Day4Page from "../features/day4/Day4Page";
+import AddProject from "../features/addProject/AddProject";
+import Day5Page from "../features/day5/Day5Page";
+import Day6Page from "../features/day6/Day6Page";
+import Day7Page from "../features/day7/Day7Page";
+import Day8Routes from "../features/day8/routes";
 
 const routes = [
   {
@@ -46,7 +47,7 @@ const routes = [
   path:'day7',
   element:<Day7Page/>,
  },
-,
+ Day8Routes,
 ];
 
 export const router = createBrowserRouter(routes);
