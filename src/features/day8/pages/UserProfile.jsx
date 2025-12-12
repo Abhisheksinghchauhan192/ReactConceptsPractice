@@ -5,10 +5,9 @@ import NoUserFoundPage from "./NoUserFoundPage";
 import { useNavigate, useParams } from "react-router-dom";
 
 export default function UserProfile() {
-
   const { users, error, loading, refresh } = useUsers();
   const userId = useParams("id").id;
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   if (loading) return <LoadingPage />;
   if (error) return <ErrorPage onClick={refresh} />;
   if (!users || users.length === 0)
@@ -17,13 +16,15 @@ export default function UserProfile() {
   const user = users.find((u) => u.id == userId);
   return (
     <div className="flex flex-col gap-10 w-full bg-slate-950/30 min-h-screen p-20">
-
       <div>
-        <button onClick={()=>navigate(-1)}
+        <button
+          onClick={() => navigate(-1)}
           className="px-2 py-1 bg-emerald-300 cursor-pointer border-none rounded-2xl text-slate-950"
-          >← Back</button>
+        >
+          ← Back
+        </button>
       </div>
-    
+
       <div className="flex  p-2 sm:pl-4 sm:pt-2 bg-slate-700 rounded-2xl w-40 sm:w-full h-40 sm:h-45 relative justify-end overflow-hidden ">
         <img
           src={user.avatar}

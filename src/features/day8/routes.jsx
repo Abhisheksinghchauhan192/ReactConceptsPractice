@@ -13,7 +13,7 @@ const Day8Routes = {
       index: true,
       element: (
         <Suspense fallback={<PageLoader size="20" />}>
-          <UserList />,
+          <UserList />
         </Suspense>
       ),
     },
@@ -21,7 +21,7 @@ const Day8Routes = {
       path: "user/:id",
       element: (
         <Suspense fallback={<PageLoader size ="20"/>}>
-          <UserProfile />,
+          <UserProfile />
         </Suspense>
       )
     },
