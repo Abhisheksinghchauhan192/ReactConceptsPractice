@@ -9,6 +9,7 @@ import Day5Page from "../features/day5/Day5Page";
 import Day6Page from "../features/day6/Day6Page";
 import Day7Page from "../features/day7/Day7Page";
 import Day8Routes from "../features/day8/routes";
+import Day9Routes from "../features/day9/routes";
 
 const routes = [
   {
@@ -16,7 +17,7 @@ const routes = [
     element: <DashBoard />,
   },
   {
-    path: "/addProject",
+    path: "addProject",
     element: <AddProject />,
   },
   {
@@ -48,6 +49,7 @@ const routes = [
   element:<Day7Page/>,
  },
  Day8Routes,
+ Day9Routes,
 ];
 
 export const router = createBrowserRouter(routes);
