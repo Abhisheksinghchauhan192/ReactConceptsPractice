@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="max-w-3xl">
+    <div className="max-w-3xl min-h-screen">
       <h1 className="text-3xl font-semibold text-slate-100 mb-4">
         Day 9 – React Routing Playground
       </h1>
