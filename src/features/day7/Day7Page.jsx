@@ -54,7 +54,6 @@ export default function Day7Page() {
     dispatch({ type: "field_changed", field: name, value: value });
   }
 
-
   return (
     <div className="flex flex-col gap-10 w-full min-h-screen bg-linear-to-b from-gray-950 to-gray-950/90  items-center p-2 sm:p-10  text-gray-50">
       <header className="flex flex-col gap-10  justify-around w-full sm:max-w-lg rounded-2xl p-2">
