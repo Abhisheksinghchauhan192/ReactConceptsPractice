@@ -11,6 +11,7 @@ import Day7Page from "../features/day7/Day7Page";
 import Day8Routes from "../features/day8/routes";
 import Day9Routes from "../features/day9/routes";
 import Day10Routes from "../features/day10/routes";
+import StopwatchRoutes from "../features/day11/routes";
 
 const routes = [
   {
@@ -52,6 +53,7 @@ const routes = [
  Day8Routes,
  Day9Routes,
  Day10Routes,
+ StopwatchRoutes,
 ];
 
 export const router = createBrowserRouter(routes);

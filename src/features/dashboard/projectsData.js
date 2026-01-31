@@ -8,6 +8,7 @@ export const projectsData =[
     {name:"Day7",link:"/day7",desc:"Sign up Form Component ",details:"A signup form with flexible FormInput component "},
     {name:"Day8",link:"/day8",desc:"Dynamic Routinig in React ",details:"Implementation of dynamic routing in reeact with user and userProfile Page Dynamic Routing."},
     {name:"Day9",link:'/day9',desc:"Prefessional Layout Routing",details:"Implemented Professional Layout Routes and User Interface ."},
-    {name:"StopWatch",link:'/day10',desc:"StopWatch with lap fn.",details:"A full fleged Stopwatch with pause ,resume , stop and Lap time functionality. "},
+    {name:"Day10",link:"/day10",desc:"A Reordrable list with external inputs",details:"A full responsive modern list with functionality of re-ordering by dragging."},
+    {name:"StopWatch",link:'/stopwatch',desc:"StopWatch with lap fn.",details:"A full fleged Stopwatch with pause ,resume , stop and Lap time functionality. "},
 
 ]
